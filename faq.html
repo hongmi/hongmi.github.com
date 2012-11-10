@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Quick start Guide</title>
+    <title>FAQ</title>
     <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="generator" content="o-blog version 1.2-116-ge7ec207"/>
@@ -117,7 +117,7 @@
       <div class="container">
 	<ul class="breadcrumb">
   <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
-  
+  <li>FAQ</li>
   </ul>
 
       </div>
@@ -125,147 +125,127 @@
     <div id="page" class="container">
 
 <article>
+  <header class="article-header">
+    <div class="well">
+      <div class="row">
+	<div class="span1">
+	  <div class="qr-code">
+  <img src="http://chart.apis.google.com/chart?chs=50x50&cht=qr&chld=|0&chl=http%3a%2f%2frenard.github.com%2fo-blog%2ffaq.html"
+       alt="qr-code" />
+</div>
+
+	</div>
+	<h1 class="offset1" style="font-size: 250%;">FAQ</h1>
+      </div>
+    </div>
+  </header>
   <div class="article-content">
     
 
 
-
-
-
-<div class="hero-unit">
-
-
-<h1>o-blog</h1>
-
-<p>
-A stand-alone blog and publication tool for <a href="http://orgmode.org/">Org-mode</a>.
-</p>
-
-
-</div>
-
-
-
-<h1 style="font-size: 500%;">Quick start guide</h1>
-
-</div><div class="span4 ">
-
-
-
-<div class="hero-unit" style="font-size: 200%;">
-
-<p>
-<a href="./features.html"><i>icon-cog icon-white</i> Features</a>
-</p>
-<p>
-<a href="https://github.com/renard/o-blog"><i>icon-github-sign icon-white</i> Github</a>
-</p>
-<p>
-<a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
-</p>
-<p>
-<a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
-</p>
-<p>
-<a href="./bug-report.html"><i>icon-fire icon-white</i> Bug report</a>
-</p>
-
-
-
-</div>
-
-
-</div></div>
-
-
-
-
 <div id="outline-container-1" class="outline-3">
-<h3 id="sec-1">Setup</h3>
+<h3 id="sec-1">Why does my page look ugly/un-styled?</h3>
 <div class="outline-text-3" id="text-1">
 
 
 <p>
-First you need to install <a href="http://www.gnu.org/s/emacs">Emacs</a> (tested with version 24, might work with 23)
-and <a href="http://orgmode.org/">Org-mode</a> (tested with version 7.8.09, other <i>might</i> work as well). Then
-you have 2 ways to install <a href="https://github.com/renard/o-blog">o-blog</a>.
-</p>
-
-
-<div class="row "><div class="span5 ">
-
-
-<h4>Using el-get</h4>
-
-<p>
-If you are using <a href="https://github.com/dimitri/el-get">el-get</a> it would be very easy to install. All you need to do
-is to add <code>o-blog</code> to <code>el-get-sources</code> and type:
-</p>
-<p>
-<code>M-x el-get-install o-blog</code>
-</p>
-<p>
-If you are using <code>el-get</code> 4 or greater, you only need to type:
-</p>
-<p>
-<code>M-x el-get-install o-blog</code>.
-</p>
-
-
-</div><div class="span6 ">
-
-
-<h4>Manual setup</h4>
-
-<p>
-Start by cloning the <i>git</i> repository from <a href="http://github.com">Github</a>.
+Maybe you are using <a href="https://www.google.com/chrome/">Google Chrome</a> and you're trying to view your site
+locally using a <code>file:///path/to/your/site/out/index.html</code> scheme.
+Open the JavaScript console <code>Ctrl+Shift+I</code> and you should see
+something like:
 </p>
 
 
 
-<pre class="src src-bash">cd ~/.emacs.d
-git clone https://github.com/renard/o-blog.git
+<pre class="example">XMLHttpRequest cannot load file:///path/to/your/site/out/out/style/css/o-blog.less. Cross origin requests are only supported for HTTP.
+less-1.2.1.min.js:8Uncaught Error: NETWORK_ERR: XMLHttpRequest Exception 101
 </pre>
 
 
 
 
 <p>
-And add following to your <code>~/.emacs.d/init.el</code> file:
+If so, that is a known Chrome issue with loading local javascript
+files, and is actually a <i>security feature</i> in Chrome.
+</p>
+<p>
+You can disable this with the <code>--allow-file-access-from-files</code> option
+in Chrome, or you can use another browser like Firefox, or setup a
+local webserver.
+</p>
+<p>
+To use a local webserver, there are many complex solutions such as
+<a href="http://nginx.org/">nginx</a> or <a href="http://httpd.apache.org/">Apache</a> or many <a href="http://en.wikipedia.org/wiki/Comparison_of_web_server_software">others</a>. If you prefer a lighter and simpler
+solution using Python, simply run:
 </p>
 
 
 
-<pre class="src src-emacs-lisp">(add-to-list 'load-path <span style="color: #00ff00;">"~/.emacs.d/o-blog"</span>)
-(<span style="color: #00ffff; font-weight: bold;">require</span> '<span style="color: #ff00ff;">o-blog</span>)
+<pre class="src src-sh"><span style="color: #0000ff; font-weight: bold;">cd</span> /path/to/your/site &amp;&amp; python -m SimpleHTTPServer
 </pre>
 
 
 
 
+<p>
+&hellip;and browse <a href="http://localhost:8000">http://localhost:8000</a>
+</p>
+<p>
+Or within Emacs you can run the <a href="https://github.com/jrhbailey/emacs-http-server">emacs-http-server</a>:
+</p>
 
 
 
-</div></div>
+<pre class="src src-emacs-lisp">(<span style="color: #00ffff; font-weight: bold;">require</span> '<span style="color: #ff00ff;">httpd</span>)
+(setq httpd-root <span style="color: #00ff00;">"/path/to/your/site"</span>)
+(httpd-start)
+</pre>
 
 
+
+
+<p>
+&hellip;and browse <a href="http://localhost:8080">http://localhost:8080</a>
+</p>
+<p>
+Another alternative would be the use of <a href="http://www.emacswiki.org/emacs/Elnode">elnode</a> but it seems to be more
+complex.
+</p>
 
 </div>
 
 </div>
 
 <div id="outline-container-2" class="outline-3">
-<h3 id="sec-2">Publish</h3>
+<h3 id="sec-2">Why html pages are not minified?</h3>
 <div class="outline-text-3" id="text-2">
 
 
 <p>
-Open the <code>~/.emacs.d/o-blog/example/sample.org</code> file and type <code>M-x org-publish-blog</code>. The result site would be published by default in
-<code>~/.emacs.d/o-blog/out</code>.
+HTML compression very tricky. Things can easily go wrong. Using a
+<a href="http://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/">GZip compression</a> would be more efficient.
 </p>
 <p>
-See the <a href="Tips/index.html">tips</a> for more details.
+Anyway if you still want to minify your pages, you can have a look to
+<a href="http://code.google.com/p/htmlcompressor/">htmlcompressor</a>,
+<a href="http://developer.yahoo.com/yui/compressor/">yuicompressor</a> and
+<a href="https://developers.google.com/closure/compiler/">Closure compiler</a>. You
+can also read Juriy Zaytsev's articles on
+<a href="http://perfectionkills.com/optimizing-html/">optimizing HTML</a> and
+<a href="http://perfectionkills.com/experimenting-with-html-minifier/">experimenting with html minifier</a>.
 </p>
+<p>
+So here is the magic! Once your site is generated, you can run the following command:
+</p>
+
+
+
+<pre class="src src-sh">htmlcompressor --compress-js --compress-css --recursive --mask <span style="color: #00ff00;">'*.js;*.html;*.xml;*.css;*.less'</span> -o /path/to/out/ /path/to/out
+</pre>
+
+
+
+
 
 </div>
 </div>

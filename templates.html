@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Quick start Guide</title>
+    <title>Templates</title>
     <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="generator" content="o-blog version 1.2-116-ge7ec207"/>
@@ -117,7 +117,7 @@
       <div class="container">
 	<ul class="breadcrumb">
   <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
-  
+  <li>Templates</li>
   </ul>
 
       </div>
@@ -125,146 +125,171 @@
     <div id="page" class="container">
 
 <article>
+  <header class="article-header">
+    <div class="well">
+      <div class="row">
+	<div class="span1">
+	  <div class="qr-code">
+  <img src="http://chart.apis.google.com/chart?chs=50x50&cht=qr&chld=|0&chl=http%3a%2f%2frenard.github.com%2fo-blog%2ftemplates.html"
+       alt="qr-code" />
+</div>
+
+	</div>
+	<h1 class="offset1" style="font-size: 250%;">Templates</h1>
+      </div>
+    </div>
+  </header>
   <div class="article-content">
     
 
+<p>
+HTML-based files. Within templates, Lisp code can be interpreted as
+long as <code>&lt;lisp&gt;</code> tags surrounds the code.
+</p>
 
 
 
+<pre class="src src-html">&lt;<span style="color: #0000ff; font-weight: bold;">h1</span>&gt;&lt;<span style="color: #0000ff; font-weight: bold;">lisp</span>&gt;(ob:blog-title BLOG)&lt;/<span style="color: #0000ff; font-weight: bold;">lisp</span>&gt;&lt;/<span style="color: #0000ff; font-weight: bold;">h1</span>&gt;
+</pre>
 
-<div class="hero-unit">
 
 
-<h1>o-blog</h1>
 
 <p>
-A stand-alone blog and publication tool for <a href="http://orgmode.org/">Org-mode</a>.
+The above would be exported to something like:
+</p>
+
+
+
+<pre class="src src-html">&lt;<span style="color: #0000ff; font-weight: bold;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">o-blog</span>&lt;/<span style="color: #0000ff; font-weight: bold;">h1</span>&gt;
+</pre>
+
+
+
+
+
+
+<div class="alert alert-info"><p class="alert-heading">Information</p>
+
+<p>
+<a href="https://github.com/renard/o-blog">o-blog</a> only needs <code>blog_</code> prefixed templates, as long as they do not need any
+other templates (using <code>ob:insert-template</code> function).
+</p>
+<p>
+All other templates are defined for convenience.
 </p>
 
 
 </div>
-
-
-
-<h1 style="font-size: 500%;">Quick start guide</h1>
-
-</div><div class="span4 ">
-
-
-
-<div class="hero-unit" style="font-size: 200%;">
-
-<p>
-<a href="./features.html"><i>icon-cog icon-white</i> Features</a>
-</p>
-<p>
-<a href="https://github.com/renard/o-blog"><i>icon-github-sign icon-white</i> Github</a>
-</p>
-<p>
-<a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
-</p>
-<p>
-<a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
-</p>
-<p>
-<a href="./bug-report.html"><i>icon-fire icon-white</i> Bug report</a>
-</p>
-
-
-
-</div>
-
-
-</div></div>
 
 
 
 
 <div id="outline-container-1" class="outline-3">
-<h3 id="sec-1">Setup</h3>
+<h3 id="sec-1">Required templates</h3>
 <div class="outline-text-3" id="text-1">
 
 
 <p>
-First you need to install <a href="http://www.gnu.org/s/emacs">Emacs</a> (tested with version 24, might work with 23)
-and <a href="http://orgmode.org/">Org-mode</a> (tested with version 7.8.09, other <i>might</i> work as well). Then
-you have 2 ways to install <a href="https://github.com/renard/o-blog">o-blog</a>.
+<code>blog_</code> prefixed templates.
 </p>
+<ul>
+<li>
+<code>blog_static.html</code>: Exports any static page (function <code>ob-write-static</code>).
+</li>
+<li>
+<code>blog_post.html</code>: Exports a blog post (function <code>ob-write-posts</code>).
+</li>
+<li>
+<code>blog_tags.html</code>: Exports a tag cloud page (function <code>ob-write-tags</code>).
+</li>
+<li>
+<code>blog_tags-detail.html</code>: Exports page matching a specific tag (function
+<code>ob-write-tags</code>).
+</li>
+<li>
+<code>blog_archive.html</code>: Exports the whole archives (all categories, all
+years, all months) page (function <code>ob-write-index</code>).
+</li>
+<li>
+<code>blog_rss.html</code>: Exports the rss feed (function <code>ob-write-index</code>).
+</li>
+<li>
+<code>blog_index_month.html</code> Export index page for a given month (function
+<code>ob-write-index</code>).
+</li>
+<li>
+<code>blog_index_year.html</code> Export index page for a given year (function
+<code>ob-write-index</code>).
+</li>
+<li>
+<code>blog_index_catery.html</code> Export index page for a given category (function
+<code>ob-write-index</code>).
 
-
-<div class="row "><div class="span5 ">
-
-
-<h4>Using el-get</h4>
-
-<p>
-If you are using <a href="https://github.com/dimitri/el-get">el-get</a> it would be very easy to install. All you need to do
-is to add <code>o-blog</code> to <code>el-get-sources</code> and type:
-</p>
-<p>
-<code>M-x el-get-install o-blog</code>
-</p>
-<p>
-If you are using <code>el-get</code> 4 or greater, you only need to type:
-</p>
-<p>
-<code>M-x el-get-install o-blog</code>.
-</p>
-
-
-</div><div class="span6 ">
-
-
-<h4>Manual setup</h4>
-
-<p>
-Start by cloning the <i>git</i> repository from <a href="http://github.com">Github</a>.
-</p>
-
-
-
-<pre class="src src-bash">cd ~/.emacs.d
-git clone https://github.com/renard/o-blog.git
-</pre>
-
-
-
-
-<p>
-And add following to your <code>~/.emacs.d/init.el</code> file:
-</p>
-
-
-
-<pre class="src src-emacs-lisp">(add-to-list 'load-path <span style="color: #00ff00;">"~/.emacs.d/o-blog"</span>)
-(<span style="color: #00ffff; font-weight: bold;">require</span> '<span style="color: #ff00ff;">o-blog</span>)
-</pre>
-
-
-
-
-
-
-
-</div></div>
-
-
-
+</li>
+</ul>
 </div>
 
 </div>
 
 <div id="outline-container-2" class="outline-3">
-<h3 id="sec-2">Publish</h3>
+<h3 id="sec-2">Index-page templates</h3>
 <div class="outline-text-3" id="text-2">
 
 
 <p>
-Open the <code>~/.emacs.d/o-blog/example/sample.org</code> file and type <code>M-x org-publish-blog</code>. The result site would be published by default in
-<code>~/.emacs.d/o-blog/out</code>.
+<code>index_</code> prefixed templates. They are used by all <code>blog_index_*.html</code>
+templates to generate a list of articles matching given category, year and
+month, and the entire archives.
 </p>
+<ul>
+<li>
+<code>index_archives.html</code>
+</li>
+<li>
+<code>index_category.html</code>
+</li>
+<li>
+<code>index_month.html</code>
+</li>
+<li>
+<code>index_year.html</code>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3">Navigation templates</h3>
+<div class="outline-text-3" id="text-3">
+
+
 <p>
-See the <a href="Tips/index.html">tips</a> for more details.
+<code>nav_</code> prefixed templates are used to generate navigation snippets:
+</p>
+<ul>
+<li>
+<code>nav_links.html</code>: Used to generate navigation menu used in both the
+page header and footer.
+</li>
+<li>
+<code>nav_tag-cloud.html</code>: Used to generate tag cloud on page bottom.
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-3">
+<h3 id="sec-4">Page templates</h3>
+<div class="outline-text-3" id="text-4">
+
+
+<p>
+<code>page_</code> prefixed templates used for both HTML header and footer.
 </p>
 
 </div>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Quick start Guide</title>
+    <title>Changelog</title>
     <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="generator" content="o-blog version 1.2-116-ge7ec207"/>
@@ -117,7 +117,7 @@
       <div class="container">
 	<ul class="breadcrumb">
   <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
-  
+  <li>Changelog</li>
   </ul>
 
       </div>
@@ -125,150 +125,199 @@
     <div id="page" class="container">
 
 <article>
+  <header class="article-header">
+    <div class="well">
+      <div class="row">
+	<div class="span1">
+	  <div class="qr-code">
+  <img src="http://chart.apis.google.com/chart?chs=50x50&cht=qr&chld=|0&chl=http%3a%2f%2frenard.github.com%2fo-blog%2fchangelog.html"
+       alt="qr-code" />
+</div>
+
+	</div>
+	<h1 class="offset1" style="font-size: 250%;">Changelog</h1>
+      </div>
+    </div>
+  </header>
   <div class="article-content">
     
 
+<ul>
+<li>
+Add a post-sorter option.
+
+</li>
+<li>
+2012-06-05
+<ul>
+<li>
+Update to
+<ul>
+<li>
+Font-Awesome 2.0.0-6-g35fca03
+</li>
+<li>
+bootstrap 2.0.4
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+2012-05-21
+<ul>
+<li>
+Use responsive bootstrap features.
+
+</li>
+</ul>
+</li>
+<li>
+2012-05-07
+<ul>
+<li>
+Update to:
+<ul>
+<li>
+less.js v1.0-547-ga2df119
+</li>
+</ul>
+</li>
+<li>
+Bootstrap widgets:
+<ul>
+<li>
+label
+</li>
+<li>
+badge
+</li>
+<li>
+progress bar
+</li>
+<li>
+well
+</li>
+<li>
+page header
+</li>
+<li>
+hero unit
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+2012-05-04
+<ul>
+<li>
+Update to:
+<ul>
+<li>
+bootstrap v2.0.3-5-gb261f97.
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+2012-04-17
+<ul>
+<li>
+Update to:
+<ul>
+<li>
+less 1.3.0.
+</li>
+<li>
+Font-Awesome v1.0.0-7-g563a6f3.
+</li>
+<li>
+bootstrap v2.0.2-3-g6506ede.
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+2012-04-10
+<ul>
+<li>
+Add i18n support.
+
+</li>
+</ul>
+</li>
+<li>
+2012-04-06
+<ul>
+<li>
+Add org-mode CUSTOM_ID.
+
+</li>
+</ul>
+</li>
+<li>
+2012-03-28
+<ul>
+<li>
+Add support for <a href="http://en.wikipedia.org/wiki/QR_code">QR-code</a>.
+
+</li>
+</ul>
+</li>
+<li>
+2012-03-20
+<ul>
+<li>
+Add <a href="http://disqus.com">Disqus</a> support.
+</li>
+<li>
+User can select the file name sanitizer function.
+</li>
+<li>
+Add <a href="./bug-report.html">bug report howto</a>.
+
+</li>
+</ul>
+</li>
+<li>
+2012-03-06
+<ul>
+<li>
+Add support for Font-Awesome
+
+</li>
+</ul>
+</li>
+<li>
+2012-02-28
+<ul>
+<li>
+Switched to bootstrap 2.0.1
+</li>
+<li>
+Switched to lesscss 1.2.2
+
+</li>
+</ul>
+</li>
+<li>
+2012-01-23
+<ul>
+<li>
+Change tag system from "Tags" to org tagging system.
 
 
-
-
-<div class="hero-unit">
-
-
-<h1>o-blog</h1>
-
-<p>
-A stand-alone blog and publication tool for <a href="http://orgmode.org/">Org-mode</a>.
-</p>
-
-
-</div>
-
-
-
-<h1 style="font-size: 500%;">Quick start guide</h1>
-
-</div><div class="span4 ">
-
-
-
-<div class="hero-unit" style="font-size: 200%;">
-
-<p>
-<a href="./features.html"><i>icon-cog icon-white</i> Features</a>
-</p>
-<p>
-<a href="https://github.com/renard/o-blog"><i>icon-github-sign icon-white</i> Github</a>
-</p>
-<p>
-<a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
-</p>
-<p>
-<a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
-</p>
-<p>
-<a href="./bug-report.html"><i>icon-fire icon-white</i> Bug report</a>
-</p>
-
-
-
-</div>
-
-
-</div></div>
-
-
-
-
-<div id="outline-container-1" class="outline-3">
-<h3 id="sec-1">Setup</h3>
-<div class="outline-text-3" id="text-1">
-
-
-<p>
-First you need to install <a href="http://www.gnu.org/s/emacs">Emacs</a> (tested with version 24, might work with 23)
-and <a href="http://orgmode.org/">Org-mode</a> (tested with version 7.8.09, other <i>might</i> work as well). Then
-you have 2 ways to install <a href="https://github.com/renard/o-blog">o-blog</a>.
-</p>
-
-
-<div class="row "><div class="span5 ">
-
-
-<h4>Using el-get</h4>
-
-<p>
-If you are using <a href="https://github.com/dimitri/el-get">el-get</a> it would be very easy to install. All you need to do
-is to add <code>o-blog</code> to <code>el-get-sources</code> and type:
-</p>
-<p>
-<code>M-x el-get-install o-blog</code>
-</p>
-<p>
-If you are using <code>el-get</code> 4 or greater, you only need to type:
-</p>
-<p>
-<code>M-x el-get-install o-blog</code>.
-</p>
-
-
-</div><div class="span6 ">
-
-
-<h4>Manual setup</h4>
-
-<p>
-Start by cloning the <i>git</i> repository from <a href="http://github.com">Github</a>.
-</p>
-
-
-
-<pre class="src src-bash">cd ~/.emacs.d
-git clone https://github.com/renard/o-blog.git
-</pre>
-
-
-
-
-<p>
-And add following to your <code>~/.emacs.d/init.el</code> file:
-</p>
-
-
-
-<pre class="src src-emacs-lisp">(add-to-list 'load-path <span style="color: #00ff00;">"~/.emacs.d/o-blog"</span>)
-(<span style="color: #00ffff; font-weight: bold;">require</span> '<span style="color: #ff00ff;">o-blog</span>)
-</pre>
-
-
-
-
-
-
-
-</div></div>
-
-
-
-</div>
-
-</div>
-
-<div id="outline-container-2" class="outline-3">
-<h3 id="sec-2">Publish</h3>
-<div class="outline-text-3" id="text-2">
-
-
-<p>
-Open the <code>~/.emacs.d/o-blog/example/sample.org</code> file and type <code>M-x org-publish-blog</code>. The result site would be published by default in
-<code>~/.emacs.d/o-blog/out</code>.
-</p>
-<p>
-See the <a href="Tips/index.html">tips</a> for more details.
-</p>
-
-</div>
-</div>
+</li>
+</ul>
+</li>
+</ul>
 
   </div>
 </article>
