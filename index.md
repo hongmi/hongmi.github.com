@@ -1,6 +1,6 @@
 ---
 layout: page
-title: home
+title: Home | Cloud 013
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
