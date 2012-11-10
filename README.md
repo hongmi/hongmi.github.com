@@ -1,42 +1,34 @@
-# Jekyll-Bootstrap
+## Theme info
 
-The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
+Theme Name: the\_program  
+Description: A minimumlist theme for [jekyll](https://github.com/mojombo/jekyll). Theming is done on [Jekyll-Bootstrap](http://jekyllbootstrap.com/).  
+Author: Yuya Saito @ cssradar@gmail.com  
+Demo URL: http://layouts-the.me.s3-website-us-east-1.amazonaws.com/themes/the-program/
+Version: 1.0
 
-## Usage
+## About the\_program
 
-For all usage and documentation please see: <http://jekyllbootstrap.com>
+the_program is inspired by [docco.coffee](http://jashkenas.github.com/docco/).
+Designed for documenting programming language, but you can certenly use this
+any other purpose.
 
-## Version
+- Design is simple so is the code behind it. You can easily customize it.
+- Built with mobile first.
+- Written with [LESS](http://lesscss.org/) so if you need to edit it, you should get [Codekit](http://incident57.com/codekit/). I use this app to develop this theme.
 
-0.2.13 - stable and versioned using [semantic versioning](http://semver.org/).
+## About me
 
-## Contributing 
+I'm Yuya Saito who is a web designer/front-end developer from Tokyo, Japan.
 
-This repository tracks 2 projects:
+## How to use it?
 
-- **Jekyll-Bootstrap Framework.**  
-  The framework for which users should clone and build their blog on top of is available in the master branch.
-  
-  To contribute to the framework please make sure to checkout your branch based on `jb-development`!!
-  This is very important as it allows me to accept your pull request without having to publish a public version release.
-  
-  Small, atomic Features, bugs, etc.   
-  Use the `jb-development` branch but note it will likely change fast as pull requests are accepted.   
-  Please rebase as often as possible when working.   
-  Work on small, atomic features/bugs to avoid upstream commits affecting/breaking your development work.
-  
-  For Big Features or major API extensions/edits:   
-  This is the one case where I'll accept pull-requests based off the master branch.
-  This allows you to work in isolation but it means I'll have to manually merge your work into the next public release.
-  Translation : it might take a bit longer so please be patient! (but sincerely thank you).
- 
-- **Jekyll-Bootstrap Documentation Website.**    
-  The documentation website at <http://jekyllbootstrap.com> is maintained in the gh-pages branch.
-  Please fork and contribute documentation additions to this branch only.
+There are 2 places you should go look.
 
-The master and gh-pages branch do not share the same ancestry. Please treat them as completely separate git repositories!
+1. [Jekyll](https://github.com/mojombo/jekyll) / Jekyll repo page on Github
+2. [Jekyll-Bootstrap](http://jekyllbootstrap.com/) / (Almost) complete how-to and bootstrap for Jekyll created by [Jade Dominguez](http://plusjade.com/)
 
+## Code I didn't write
 
-## License
-
-[Creative Commons](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+- [Jekyll-Bootstrap](http://jekyllbootstrap.com/)  / [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+- [Modernizr](http://www.modernizr.com/) / MIT/BSD license
+- [HTML5 Boilerplate](http://html5boilerplate.com/): [The Unlicense](http://unlicense.org) (aka: Public Domain)
