@@ -907,13 +907,14 @@ pre {
   display: block;
   font-size: 30px;
   line-height: 52px;
-  padding-bottom: 26px;
+  padding-bottom: 6px;
 }
-.the-header .unit-head .nav-global .site-description {
-  display: block;
-  width: auto;
+.the-header .unit-head .nav-global .logo .site-description {
   font-size: 20px;
   color: #444444;
+  font-weight: normal;
+  font-style: italic;
+  padding-bottom: 16px;
 }
 .body .unit-body {
   border-top: 1px solid rgba(255, 255, 255, 0.6);
