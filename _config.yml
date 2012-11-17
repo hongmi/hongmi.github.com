@@ -10,6 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : 朝花夕拾
+description : Just a geek's site..
 tagline: Site Tagline
 author :
   name : 鸿悯
