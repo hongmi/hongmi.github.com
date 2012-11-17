@@ -968,8 +968,8 @@ pre {
   .the-header .unit-head .nav-global li a,
   .the-header .unit-head .nav-global li div {
     display: block;
-    padding: 26px;
-    height: 26px;
+    padding: 20px;
+    height: 20px;
   }
   .the-header .unit-head .nav-global li a:hover {
     background-color: #fff04a;
@@ -988,7 +988,7 @@ pre {
     width: 100%;
   }
   .the-header .unit-head .nav-global .logo a {
-    font-size: 26px;
+    font-size: 20px;
     line-height: normal;
   }
   .the-header .unit-head .nav-global .logo a:hover {
