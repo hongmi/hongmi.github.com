@@ -909,6 +909,12 @@ pre {
   line-height: 52px;
   padding-bottom: 26px;
 }
+.the-header .unit-head .nav-global .site-description {
+  display: block;
+  width: auto;
+  font-size: 20px;
+  color: #444444;
+}
 .body .unit-body {
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   padding: 26px;
