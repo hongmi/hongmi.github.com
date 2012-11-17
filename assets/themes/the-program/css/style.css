@@ -905,14 +905,13 @@ pre {
 }
 .the-header .unit-head .nav-global .logo a {
   display: block;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 52px;
   padding-bottom: 6px;
-  color:#fff;
 }
 .the-header .unit-head .nav-global .logo .site-description {
   font-size: 14px;
-  color: #fff;
+  color: #888;
   font-style: italic;
   padding-left: 26px;
   margin-bottom: 5px;
