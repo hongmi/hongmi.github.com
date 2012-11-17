@@ -908,13 +908,14 @@ pre {
   font-size: 30px;
   line-height: 52px;
   padding-bottom: 6px;
+  color:#fff;
 }
 .the-header .unit-head .nav-global .logo .site-description {
-  font-size: 20px;
-  color: #444444;
-  font-weight: normal;
+  font-size: 14px;
+  color: #fff;
   font-style: italic;
-  padding-bottom: 16px;
+  padding-left: 26px;
+  margin-bottom: 5px;
 }
 .body .unit-body {
   border-top: 1px solid rgba(255, 255, 255, 0.6);
