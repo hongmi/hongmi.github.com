@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 朝花夕拾
+title: Home
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
