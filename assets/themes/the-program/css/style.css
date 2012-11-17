@@ -988,7 +988,7 @@ pre {
     width: 100%;
   }
   .the-header .unit-head .nav-global .logo a {
-    font-size: 30px;
+    font-size: 26px;
     line-height: normal;
   }
   .the-header .unit-head .nav-global .logo a:hover {
@@ -1039,7 +1039,7 @@ pre {
     width: 19%;
   }
   .the-header .unit-head {
-    padding: 26px;
+    padding: 20px;
   }
   .the-header .unit-head .nav-global li {
     float: none;
