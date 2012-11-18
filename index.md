@@ -1,6 +1,6 @@
 ---
 layout: page
-title: {{ site.title }}
+title: 朝花夕拾
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
