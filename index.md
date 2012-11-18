@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Home
+title: {{ site.title }}
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
