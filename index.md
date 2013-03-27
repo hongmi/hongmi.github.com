@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 朝花夕拾
-tagline: just a geek's blog..
+title: 
+tagline: Boldly said. But I remain unconvinced.
 ---
 {% include JB/setup %}
 
