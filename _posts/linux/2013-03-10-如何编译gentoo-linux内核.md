@@ -2,7 +2,7 @@
 layout: post
 title: 编译gentoo linux内核 3.7.10
 category : linux
-tags : [linux,gentoo,kernel]
+tags : [linux, gentoo, kernel]
 ---
 {% include JB/setup %}
 
