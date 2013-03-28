@@ -16,7 +16,6 @@ linux符号链接文件则指向linux-3.7.9-gentoo目录。
   
 修改linux符号链接使其指向最新源代码
 
-<<<<<<< HEAD
     ln -s -T /usr/src/linux-3.7.10-gentoo /usr/src/linux  
 进入源码目录
 
@@ -40,6 +39,3 @@ linux符号链接文件则指向linux-3.7.9-gentoo目录。
     
     reboot
    
-=======
-   
->>>>>>> b38403fc74f8e5e289ec4899eb1c994f51bce270
